@@ -1,15 +1,13 @@
 package kyu4;
 
+import java.util.Arrays;
+
 public class Interval {
     public static int sumIntervals(int[][] intervals) {
         if (intervals == null) return 0;
         sort(intervals);
         mergeOverlappingIntervals(intervals);
-        int sum = 0;
-        for (int i = 0; i < intervals.length; i++) {
-            sum += intervals[i][1] - intervals[i][0];
-        }
-        return sum;
+        return Arrays.stream(intervals).mapToInt(i -> i[1] - i[0]).sum();
     }
 
     private static void mergeOverlappingIntervals(int[][] arr) {
