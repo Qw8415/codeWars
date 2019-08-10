@@ -5,6 +5,7 @@ import java.util.Arrays;
 
 public class Interval {
     public static int sumIntervals(int[][] intervals) {
+        if (intervals == null) return 0;
         sort(intervals);
         mergeOverlappingIntervals(intervals);
         int sum = 0;
