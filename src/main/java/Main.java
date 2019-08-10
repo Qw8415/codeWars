@@ -3,10 +3,21 @@ import kyu4.*;
 public class Main {
 
     public static void main(String[] args) {
-        String morseCode = MorseCodeDecoder.decodeBits("1100110011001100000011000000111111001100111111001111110000000000000011001111110011111100111111000000110011001111110000001111110011001100000011");
-        System.out.println(morseCode);
-        morseCode = MorseCodeDecoder.decodeMorse(morseCode);
-        System.out.println(morseCode);
+        int[][] array = new int[][] {{1,2}, {3,4}};
+        for (int[] i : array) {
+            System.out.println();
+            for (int j : i) {
+                System.out.print(j + "\t");
+            }
+        }
+        for (int i = 0; i < array.length; i++) {
+            System.out.println();
+            for (int j = 0; j < array[i].length; j++) {
+                System.out.print(array[i][j] + "\t");
+            }
+        }
     }
+
+
 
 }
