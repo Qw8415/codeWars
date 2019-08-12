@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 class MorseCode {
-    private static final Map<String, String> morseToNatural = new HashMap<>() {
+    private static final Map<String, String> morseToNatural = new HashMap<String, String>() {
         {
             put(".-", "A");
             put("-...", "B");

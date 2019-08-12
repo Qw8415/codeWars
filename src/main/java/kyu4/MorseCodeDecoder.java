@@ -7,8 +7,8 @@ public class MorseCodeDecoder {
     public static String decodeBits(String bits) {
         bits = cutZeros(bits);
         Map<Integer, String> dictionary = createDictionary(bits);
-        var counter = 0;
-        var currentBit = '1';
+        int counter = 0;
+        char currentBit = '1';
         StringBuilder stringBuilder = new StringBuilder();
         for (char bit : bits.toCharArray()) {
             if (bit == currentBit) {
@@ -41,8 +41,8 @@ public class MorseCodeDecoder {
     }
 
     private static HashMap<Integer, String> createDictionary(String bits) {
-        var counter = 0;
-        var currentBit = '1';
+        int counter = 0;
+        char currentBit = '1';
         TreeSet<Integer> symbols = new TreeSet<>();
         for (char bit : bits.toCharArray()) {
             if (bit == currentBit) {
@@ -55,9 +55,9 @@ public class MorseCodeDecoder {
         }
         symbols.add(counter);
         HashMap<Integer, String> dictionary = new HashMap<>();
-        var first = symbols.first();
-        var last = symbols.last();
-        switch ((int)last/first) {
+        int first = symbols.first();
+        int last = symbols.last();
+        switch (last/first) {
             case 7:
                 dictionary.put(first * '1', ".");
                 dictionary.put(first * '0', "");

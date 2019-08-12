@@ -14,9 +14,9 @@ class SnakesLadders {
     public String play(int die1, int die2) {
         if (playersPosition[0] == 100 || playersPosition[1] == 100)
             return "Game over!";
-        var sumDie = die1 + die2;
-        var activePlayer = "Player " + (currentPlayer + 1);
-        var activePlayerPosition = move(sumDie, playersPosition[currentPlayer]);
+        int sumDie = die1 + die2;
+        String activePlayer = "Player " + (currentPlayer + 1);
+        int activePlayerPosition = move(sumDie, playersPosition[currentPlayer]);
         playersPosition[currentPlayer] = activePlayerPosition;
         if (die1 != die2) {
             currentPlayer = (currentPlayer == 1) ? 0 : 1;
