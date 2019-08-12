@@ -2,8 +2,8 @@ package kyu4;
 
 import java.util.Arrays;
 
-public class Interval {
-    public static int sumIntervals(int[][] intervals) {
+class Interval {
+    static int sumIntervals(int[][] intervals) {
         if (intervals == null) return 0;
         sort(intervals);
         mergeOverlappingIntervals(intervals);

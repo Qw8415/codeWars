@@ -6,12 +6,12 @@ class SnakesLadders {
     int currentPlayer;
 
 
-    public SnakesLadders() {
+    SnakesLadders() {
         board = createBoard();
         currentPlayer = 0;
     }
 
-    public String play(int die1, int die2) {
+    String play(int die1, int die2) {
         if (playersPosition[0] == 100 || playersPosition[1] == 100)
             return "Game over!";
         int sumDie = die1 + die2;

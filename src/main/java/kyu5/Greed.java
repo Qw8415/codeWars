@@ -1,7 +1,7 @@
 package kyu5;
 
-public class Greed{
-    public static int greedy(int[] dice){
+class Greed{
+    static int greedy(int[] dice){
         int result = 0;
         int[] numberOfOccurrences = {0,0,0,0,0,0,0};
         for (int roll : dice) {

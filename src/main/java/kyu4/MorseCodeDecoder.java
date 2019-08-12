@@ -2,9 +2,9 @@ package kyu4;
 
 import java.util.*;
 
-public class MorseCodeDecoder {
+class MorseCodeDecoder {
 
-    public static String decodeBits(String bits) {
+    static String decodeBits(String bits) {
         bits = cutZeros(bits);
         Map<Integer, String> dictionary = createDictionary(bits);
         int counter = 0;
@@ -23,7 +23,7 @@ public class MorseCodeDecoder {
         return stringBuilder.toString();
     }
 
-    public static String decodeMorse(String morseCode) {
+    static String decodeMorse(String morseCode) {
         String[] wordsMorseCode = morseCode.split("   ");
         StringBuilder stringBuilder = new StringBuilder();
         for (String word : wordsMorseCode) {
